@@ -26,12 +26,12 @@ public class RestAPIController {
 	}
 
 	@GetMapping("/employees")
-	public List<EmployeeDto> getEmployees() {
+	public List<EmployeeDto> getEmployees() throws Exception {
 		return employeesService.getEmployees();
 	}
 
 	@GetMapping("/employee/{id}")
-	public EmployeeDto getEmployee(@PathVariable int id) {
+	public EmployeeDto getEmployee(@PathVariable int id) throws Exception {
 		return employeesService.getEmployee(id);
 	}
 
